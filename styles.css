@@ -6,6 +6,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    border:1px solid red ;
 }
 
 /* GLOBAL VALUES  */
@@ -47,6 +48,7 @@ a {
     border:none;
     outline:none;
     font-family:var(--main-font);
+    cursor:pointer;
 }
 
 /* HEADER PORTION */
@@ -90,6 +92,7 @@ header{
     top:2px;
     left:5px;
     font-size: 0.8rem;
+    margin-bottom:30px;
 }
 
 .p-f-h{
@@ -98,5 +101,44 @@ header{
 
 .description{
     margin:10px;
+}
+
+
+/* MAIN SECTION */
+
+.main-section{
+    padding:4rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.m-s-h{
+    margin-bottom:30px;
+    font-size:3rem;
+    text-transform:uppercase;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:33% 33% 33%;
+    gap:20px;
+
+}
+
+
+
+
+.food-label{
+    background-color:#fff;
+    position:absolute;
+    bottom:0;
+    padding:15px;
+    width:70%;
+}
+.food-label h2{
+    margin-bottom:20px;
 }
 
