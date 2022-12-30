@@ -123,11 +123,9 @@ header{
 
 .grid{
     display:grid;
+    width: 100%;
     grid-template-columns:33% 33% 33%;
-    gap:20px;
-
 }
-
 
 
 
