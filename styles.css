@@ -1,12 +1,17 @@
 :root{
-    --main-font: 'Roboto', sans-serif;
+    --main-font:'Montserrat', sans-serif;
+    --header-font:'Oswald', sans-serif;
+    --background-color:#121212;
+    --text-color:#f1f3f5;
+    --button-color:#fcc701;
+    --btn-text-color:#121212;
+    --link-hover:#fec56c;
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    border:1px solid red ;
 }
 
 /* GLOBAL VALUES  */
@@ -15,12 +20,16 @@ body{
     font-size:100%;
     line-height:1.5rem;
     font-family:var(--main-font);
+    background:var(--background-color);
+    color:var(--text-color);
 }
 
 .logo{
-    color:#000;
+    color:var(--text-color);
     margin:0;
     font-size:2rem;
+    font-family:var(--header-font);
+    text-transform:uppercase;
 }
 
 .logo span{
@@ -30,11 +39,27 @@ body{
 
 li,
 a {
-    color:#000;
+    color:var(--text-color);
     text-decoration:none;
     list-style:none;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
+li,a:hover{
+    transition:0.5s ease-in-out;
+    color:var(--link-hover);
+}
+
+h1,h2,h3,h4,h5,h6{
+font-family:var(--header-font);
+text-transform:uppercase;
+}
+
+p{
+    color:var(--btn-text-color);
+}
 .container{
     max-width:1140px;
     margin:0 auto;
@@ -44,11 +69,12 @@ a {
 
 .btn{
     padding:15px 30px;
-    background-color: yellow;
+    background-color: var(--button-color);
     border:none;
     outline:none;
     font-family:var(--main-font);
     cursor:pointer;
+    color:var(--btn-text-color);
 }
 
 /* HEADER PORTION */
@@ -64,7 +90,7 @@ header{
 }
 
 .main-nav{
-    background-color: #fff;
+    background-color: var(--background-color);
 }
 
 .main-nav ul{
@@ -77,12 +103,13 @@ header{
 
 
 
+
 .my-personal-favorite{
     width:40%;
     color:#000;
     background-color:#fff;
     padding:30px;
-    border-radius: 5px;
+    border-radius: 3px;
     position: relative;
     margin-top:100px;
 }
@@ -92,15 +119,17 @@ header{
     top:2px;
     left:5px;
     font-size: 0.8rem;
-    margin-bottom:30px;
+    margin-bottom:50px;
+    z-index:0;
+
 }
 
 .p-f-h{
-    margin-bottom:10px;
+    margin:15px 0;
 }
 
 .description{
-    margin:10px;
+    margin:15px 0;
 }
 
 
@@ -125,9 +154,47 @@ header{
     display:grid;
     width: 100%;
     grid-template-columns:33% 33% 33%;
+    gap:10px;
 }
 
+.grid-item{
+    width:100%;
+    height:100%;
+    cursor:pointer;
+    padding:10rem;
+    margin:3px;
+    position:relative;
+}
 
+.grid-item h1{
+    width:100%;
+}
+
+.grid-item a{
+    font-size:1.3rem
+
+}
+
+.grid-item-1{
+    background:rgba(0,0,0,0.3) url(/images/pexels-nadim-shaikh-7758253.jpg);
+    background-position:center;
+    background-size:cover;
+    background-blend-mode:darken;
+}
+
+.grid-item-2{
+    background:rgba(0,0,0,0.5) url(/images/pexels-harry-dona-2338407.jpg);
+    background-position:center;
+    background-size:cover;
+    background-blend-mode:darken;
+}
+
+.grid-item-3{
+    background:rgba(0,0,0,0.5) url(/images/pexels-engin-akyurt-1460872.jpg);
+    background-position:center;
+    background-size:cover;
+    background-blend-mode:darken;
+}
 
 .food-label{
     background-color:#fff;
